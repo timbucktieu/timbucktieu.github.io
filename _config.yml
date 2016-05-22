@@ -9,7 +9,7 @@
 title: Somewhere Here
 email: tim.tieu@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Here I am, somewhere. Collecting train tickets and new experiences on the way.
+  Here I am, somewhere. Collecting train tickets and experiences on the way.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thisurlwasfree.com" # the base hostname & protocol for your site
 twitter_username: timbucktieu
