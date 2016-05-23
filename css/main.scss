@@ -1,46 +1,261 @@
-----
- -# Only the main Sass file needs front matter (the dashes are enough)
- ----
- -@charset "utf-8";
- 
--// Our variables
- -$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
- -$base-font-size:   16px;
- -$base-font-weight: 400;
- -$small-font-size:  $base-font-size * 0.875;
- -$base-line-height: 1.5;
- 
- -$spacing-unit:     30px;
- 
- -$text-color:       #111;
- -$background-color: #fdfdfd;
- -$brand-color:      #2a7ae2;
- 
- -$grey-color:       #828282;
- -$grey-color-light: lighten($grey-color, 40%);
- -$grey-color-dark:  darken($grey-color, 25%);
- 
- -// Width of the content area
- -$content-width:    800px;
- 
- -$on-palm:          600px;
- -$on-laptop:        800px;
- 
- -// Use media queries like this:
- -// @include media-query($on-palm) {
- -//     .wrapper {
- -//         padding-right: $spacing-unit / 2;
- -//         padding-left: $spacing-unit / 2;
- -//     }
- -// }
- -@mixin media-query($device) {
- -    @media screen and (max-width: $device) {
- -        @content;
- -    }
- 
- -// Import partials from `sass_dir` (defaults to `_sass`)
- -@import
- -        "base",
- -        "layout",
- -        "syntax-highlighting"
- -;
+/*Setting default font for the entire website*/
+html *
+{
+   font-family: Trebuchet MS !important;
+}
+
+/* Remove link decoration*/
+a {
+	text-decoration: none;
+}
+
+/*Title of the entire page at very top*/
+header{ 
+    display: block;
+    font-size: 4.3em;
+    margin-top: 1em;
+    margin-bottom: 0.35em;
+    margin-left: 0;
+    margin-right: 0;
+	min-width: 700px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Subheader under title entire page*/
+subheader {
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 1.7em;
+    margin-left: 0;
+    margin-right: 0;
+	min-width: 700px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*Navigation links right under header*/
+nav {
+    display: block;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+	min-width: 700px;
+	text-align: center;
+	font-weight:bold;
+}
+
+/* Title of the blog post*/
+h1{ 
+    display: block;
+    font-size: 1.6em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+	min-width: 700px;
+    text-align: center;
+	text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Date, time, author of blog post*/
+h2{ 
+    display: block;
+    font-size: 0.7em;
+    margin-top: 0.2em;
+    margin-bottom: 2.5em;
+	min-width: 700px;
+    text-align: center;
+    text-transform: uppercase;
+	color: #a8a8a8;
+}
+
+/* Main text of blog post*/
+body{ 
+    display: block;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    margin-left: 20%;
+    margin-right: 20%;
+	min-width: 700px;
+}
+
+/*Figure captions*/
+figcaption{
+    display: block;
+    font-size: 0.7em;
+	line-height: 1.2em;
+    margin-top: 0.3em;
+    margin-bottom: 1.5em;
+	min-width: 700px;
+    text-align: center;
+	color: #696969;
+}
+
+/*Dropdown boxes for "been" page*/
+select{
+   font-size:1.1em;
+   width: 75%;
+}
+
+/*Line between header*/
+hr {
+    width: 85%;
+}
+
+/*Rescaling images in the blog post. Spec for landscape and portriat*/
+img.reLong{
+    max-width: 55%; /* you can use % */
+    max-height: auto;
+}
+
+img.reWide{
+    max-width: 75%; /* you can use % */
+    max-height: auto;
+}
+
+/*Rescaling videos in blog posts. Spec for landscape or portrat*/
+video.reLong{
+    max-width: 55%; /* you can use % */
+    max-height: auto;
+}
+
+video.reWide{
+    max-width: 75%; /* you can use % */
+    max-height: auto;
+}
+
+/*Four links displayed on homepage, split four ways. Called headerFront*/
+.headerFront > div {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; 
+    width: 24%;
+    text-align: center;
+    font-size:1.3em;
+    font-weight:bold;
+    background-color: white;
+}
+
+/*Two links displayed on all blog pages, split half half between*/
+.headerHome > div {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; 
+    width: 50%;
+    text-align: center;
+    font-size:1.3em;
+    font-weight:bold;
+    background-color: white;
+}
+
+/*.headerContent > div {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; 
+    width: 100%;
+    text-align: center;
+    font-size:1.3em;
+    font-weight:bold;
+    background-color: white;
+}*/
+
+/*Display *CONTINENT* names on "Been" Page in 6 cols*/
+.headerBeen > div {
+    display: inline-block;
+    *display: inline; 
+    zoom: 1; 
+    width: 16%;
+    text-align: center;
+    font-size:1.3em;
+    font-weight:bold;
+    background-color: white;
+}
+
+/*Display *COUNTRY* names on "Been" Page in 6 cols*/
+.bodyBeen > div {
+    display: inline-block;
+    vertical-align: top;
+    *display: inline; 
+    zoom: 1; 
+    width: 16%;
+    text-align: center;
+    font-size:1.1em;
+    background-color: white;
+}
+
+/******************Setting hover/fade images on home page******************/
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 200px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 200px;
+}
+
+span.text-content {
+  font-size: 1.1em;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+span.text-content {
+  font-size: 1.1em ;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  opacity: 0;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+
+span.text-content {
+  font-size: 1.1em;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
