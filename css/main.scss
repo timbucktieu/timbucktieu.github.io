@@ -37,7 +37,6 @@ $on-laptop:        800px;
      @media screen and (max-width: $device) {
          @content;
      }
-}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
